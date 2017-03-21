@@ -2,5 +2,14 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
+  resources :users
+  resources :profiles
+  resources :products
+  resources :photos
+
+  resources :order_items do
+    resources :orders, only: [:create]
+  end
 end
