@@ -1,7 +1,7 @@
 
 
 class ShoppingCartsController < ApplicationController
-  attr_accessor :order_item
+  attr_accessor :order_item, :cart
 
   #include ShoppingCart
   #before action: set_cart
