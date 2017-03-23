@@ -8,9 +8,16 @@ Rails.application.routes.draw do
   resources :profiles
   resources :products
   resources :photos
-  resources :shopping_cart
+  resources :order_items
 
-  resources :order_items do
-    resources :orders, only: [:create]
-  end
+
+
+  get 'shopping_cart/show_addition', to: 'shopping_carts#show_addition'
+
+  post '/shopping_cart/show_addition', to: 'shopping_carts#show_addition'
+
+
+
+
+
 end
