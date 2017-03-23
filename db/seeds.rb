@@ -1,11 +1,13 @@
 User.destroy_all
 
 
+
 #Users
 
 user1 = User.create(
 email: "floris@gmail.com",
-password: "hallo123"
+password: "hallo123",
+
 )
 
 user2 = User.create(
@@ -22,6 +24,7 @@ user4 = User.create(
 email: "caroline@gmail.com",
 password: "hallo123"
 )
+
 
 # Photos
 photo1 = Photo.create(remote_image_url: "http://res.cloudinary.com/deu9tctoc/image/upload/v1490279658/slack-imgs.com_it96gi.jpg")
