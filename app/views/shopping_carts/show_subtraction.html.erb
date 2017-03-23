@@ -5,13 +5,13 @@
 <body>
   <h1>winkelwagentje</h1>
 
-  <%= form_tag({:action => "show_addition"}, {:method => "post"}) %>
+
+  <%= form_tag({:action => "show_subtraction"}, {:method => "post"}) %>
+
+  <input type= "submit"/>
   <br>
   Winkelwagentje: <%=@cart%> <br>
-  <input type= "submit"/>
   <%= form_tag %>
-
-  <%= render "shopping_carts/show_subtraction" %>
 
 </body>
   </html>
