@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :profiles
   resources :products
   resources :photos
-  resources :shopping_cart, only [:show]
+  resources :shopping_cart
 
   resources :order_items do
     resources :orders, only: [:create]
