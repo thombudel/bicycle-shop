@@ -11,7 +11,9 @@ class ProductsController < ApplicationController
 
   def add_products
     session[:products]||=[]
-    session[:products] << Product.find(params[:id])
+    @product = Product.find(params[:id])
+    session[:products] << @product
     session[:products]= @products
   end
+
 end

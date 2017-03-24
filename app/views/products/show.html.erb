@@ -28,3 +28,4 @@
 </div>
 
 <%= link_to "Back to all Bikes", products_path, class: "btn btn-default" %>
+<%= button_to "Buy!", shopping_cart_show_addition_path(id: @product.id), class: "btn btn-default" %>
