@@ -3,58 +3,57 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-                         <div class="panel panel-success">
-                            <div class="panel-body">
-
-                              <%= image_tag @photo.image.thumbnailShow %>
-
-                            </div>
-                          </div>
+            <div class="panel panel-success">
+               <div class="panel-body">
+                 <%= image_tag @photo.image.thumbnailShow %>
+               </div>
             </div>
+          </div>
         <div class="col-sm-6">
                 <div class="row">
                     <div class="col-sm-12">
-                          <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">Description</h3>
-                            </div>
-                            <div class="panel-body">
-                              <%= @product.description %>
-                            </div>
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Description</h3>
+                          </div>
+                          <div class="panel-body">
+                            <%= @product.description %>
                           </div>
                         </div>
-                    <div class="col-sm-12">
-                          <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">Details</h3>
-                            </div>
-                            <div class="panel-body">
-                              <%= @product.details %>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-sm-12">
-                          <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">Price</h3>
-                            </div>
-                            <div class="panel-body">
-                              € <%= @product.price %>
-                            </div>
-                          </div>
-                    </div>
+                      </div>
 
-                    <div class="col-sm-12">
-                          <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">Order</h3>
-                            </div>
-                            <div class="panel-body">
-                              <%= link_to "Buy Bike", products_path, class: "btn btn-default" %>
-                            </div>
-                          </div>
-                    </div>
+          <div class="col-sm-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Details</h3>
+                  </div>
+                  <div class="panel-body">
+                    <%= @product.details %>
+                  </div>
                 </div>
+          </div>
+          <div class="col-sm-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Price</h3>
+                  </div>
+                  <div class="panel-body">
+                    € <%= @product.price %>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-sm-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Order</h3>
+                  </div>
+                  <div class="panel-body">
+                    <%= link_to "Buy Bike", products_path, class: "btn btn-default" %>
+                  </div>
+                </div>
+          </div>
+          </div>
         </div>
     </div>
 </div>

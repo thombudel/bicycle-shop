@@ -1,2 +1,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.navbar  {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.navbar {
+  font-size: 30px;
+
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.slogan {
+  padding-left: 20px;
+  padding-bottom: 50px;
+
+}
+
+.nav {
+  margin: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
