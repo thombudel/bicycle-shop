@@ -1,30 +1,52 @@
 
-<div class="panel panel-primary">
-  <div class="panel-heading"><%= @product.name %></div>
 
-  <div class="panel-body">
-
-
-    <!-- Photo -->
-    <% @product.photos.each do |photo| %>
-    <%= image_tag photo.image.thumbnail %>
-    <% end %>
-
-    <!-- Description -->
-    <h4>Description</h4>
-    <p><%= @product.description %></p>
-
-
-    <!-- Details -->
-    <h4>Details</h4>
-    <p><%= @product.details %></p>
-
-    <!-- Price -->
-    <h4>Price</h4>
-    <p><%= @product.price %></p>
-
-  </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+                         <div class="panel panel-success">
+                            <div class="panel-body">
+                              <% @product.photos.each do |photo| %>
+                              <%= image_tag photo.image.thumbnail %>
+                              <% end %>
+                            </div>
+                          </div>
+            </div>
+        <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-12">
+                          <div class="panel panel-primary">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Description</h3>
+                            </div>
+                            <div class="panel-body">
+                              <%= @product.description %>
+                            </div>
+                          </div>
+                        </div>
+                    <div class="col-sm-12">
+                          <div class="panel panel-primary">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Details</h3>
+                            </div>
+                            <div class="panel-body">
+                              <%= @product.details %>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-12">
+                          <div class="panel panel-primary">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Price</h3>
+                            </div>
+                            <div class="panel-body">
+                              <%= @product.price %>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 </div>
+
 
 <%= link_to "Back to all Bikes", products_path, class: "btn btn-default" %>

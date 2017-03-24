@@ -1,12 +1,16 @@
 
 User.destroy_all
 
+#Profiles
+
+
+
+
 #Users
 
 user1 = User.create(
 email: "floris@gmail.com",
-password: "hallo123",
-
+password: "hallo123"
 )
 
 user2 = User.create(
@@ -34,7 +38,7 @@ photo4 = Photo.create(remote_image_url: "http://res.cloudinary.com/deu9tctoc/ima
 
 
 #Products
-product1 = Product.create!(
+product1 = Product.create(
 name: "Gazelle Citizen",
 description: "Dit is een grijze fiets",
 details: "2 versnellingen, 2 banden, remmen",
@@ -42,7 +46,7 @@ price: 500,
 photos: [photo1]
 )
 
-product2 = Product.create!(
+product2 = Product.create(
 name: "Herenfiets",
 description: "Dit is een grijze fiets",
 details: "2 versnellingen, 2 banden, remmen",
@@ -50,7 +54,7 @@ price: 700,
 photos: [photo2]
 )
 
-product3 = Product.create!(
+product3 = Product.create(
 name: "Vintage racefiets",
 description: "Dit is een grijze fiets",
 details: "2 versnellingen, 2 banden, remmen",
@@ -58,7 +62,7 @@ price: 600,
 photos: [photo3]
 )
 
-product4 = Product.create!(
+product4 = Product.create(
 name: "Omafiets",
 description: "Dit is een grijze fiets",
 details: "2 versnellingen, 2 banden, remmen",
