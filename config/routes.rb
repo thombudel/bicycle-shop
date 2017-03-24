@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'products/index', to: 'products#index'
   root to: 'pages#home'
 
   devise_for :users
@@ -8,8 +9,19 @@ Rails.application.routes.draw do
   resources :profiles
   resources :products
   resources :photos
+  resources :order_items
 
-  resources :order_items do
-    resources :orders, only: [:create]
-  end
+
+
+  get 'shopping_cart/show_addition', to: 'shopping_carts#show_addition'
+
+  post '/shopping_cart/show_addition', to: 'shopping_carts#show_addition'
+
+  get 'shopping_cart/show_subtraction', to: 'shopping_carts#show_subtraction'
+
+  post '/shopping_cart/show_subtraction', to: 'shopping_carts#show_subtraction'
+
+  
+
+
 end
