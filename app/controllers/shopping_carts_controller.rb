@@ -8,15 +8,19 @@ class ShoppingCartsController < ApplicationController
   def show_addition
     session[:cart]||=[]
     @cart = session[:cart]
-    @cart << "aankoop"
-    @cart <<"aankoop2"
+    #session[:cart]||=[]
+    @cart << Product.find(1)
+
+    #@cart << "gazelle"
+    #@cart <<"batavus"
+
     session[:cart]=@cart
   end
 
   def show_subtraction
     session[:cart]||=[]
     @cart = session[:cart]
-    @cart = @cart.delete_if{|score| score == "aankoop"
+    @cart = @cart.delete_if{|score| score == "gazelle"
 
       }
     session[:cart]=@cart

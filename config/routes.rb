@@ -21,5 +21,7 @@ Rails.application.routes.draw do
 
   post '/shopping_cart/show_subtraction', to: 'shopping_carts#show_subtraction'
 
+  
+
 
 end

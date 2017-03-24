@@ -7,5 +7,8 @@ class Product < ApplicationRecord
   validates :price, presence: true
   #validates :description, presence: true, length { maximum: 75 }
   #validates :details, presence: true, length { maximum: 150 }
+def name
+  @name = Product.name
+end
 
 end
