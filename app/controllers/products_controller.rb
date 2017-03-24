@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @photos = @product.photos
+    @photo = @product.photo
   end
 
   def add_products
