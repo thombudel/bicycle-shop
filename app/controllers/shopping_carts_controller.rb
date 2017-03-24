@@ -9,7 +9,7 @@ class ShoppingCartsController < ApplicationController
     session[:cart]||=[]
     @cart = session[:cart]
     #session[:cart]||=[]
-    @cart << Product.find(1)
+    @cart << Product.find([:id])
 
     #@cart << "gazelle"
     #@cart <<"batavus"
