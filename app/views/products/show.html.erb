@@ -1,3 +1,30 @@
 
-<strong>Fiets:</strong>
-<p><%= @product.name %></p>
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @product.name %></div>
+
+  <div class="panel-body">
+
+
+    <!-- Photo -->
+    <% @product.photos.each do |photo| %>
+    <%= image_tag photo.image.thumbnail %>
+    <% end %>
+
+    <!-- Description -->
+    <h4>Description</h4>
+    <p><%= @product.description %></p>
+
+
+    <!-- Details -->
+    <h4>Details</h4>
+    <p><%= @product.details %></p>
+
+    <!-- Price -->
+    <h4>Price</h4>
+    <p><%= @product.price %></p>
+
+  </div>
+
+</div>
+
+<%= link_to "Back to all Bikes", products_path, class: "btn btn-default" %>

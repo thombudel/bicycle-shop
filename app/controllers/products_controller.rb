@@ -6,14 +6,12 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    end
-  
+    @photos = @product.photos
+  end
 
   def add_products
     session[:products]||=[]
     session[:products] << Product.find(params[:id])
-    #session[:products]= @cart
     session[:products]= @products
   end
-
 end
